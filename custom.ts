@@ -173,10 +173,14 @@ namespace MCP23017 {
     //% imageLiteral=1
     //% imageLiteralColumns=12
     //% imageLiteralRows=1
+    //% group="LEDs"
     export function ClickLED(i: string): void {
         // this is not pretty but basically, i is an Image
         let im = <Image><any>i;
-        im.showImage(0)
+        // im.showImage(0) 
+        // im.showImage(5) 
+        // im.showImage(10)
+        // im.scrollImage(1, 200)
         for (let column = 0; column < 12; column++) {
          if (im.pixel(column, 0)) {
             setLed(column+1,State.High);
